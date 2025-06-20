@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMA万事屋公益导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ff69b4;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        /* 公告栏样式 */
+        .announcement {
+            background-color: #fff0f5;
+            border-left: 4px solid #ff69b4;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .announcement h3 {
+            color: #db7093;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .announcement h3:before {
+            content: "📢";
+            margin-right: 8px;
+        }
+        .announcement-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        /* 卡密区域样式 */
+        .coupon-group {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ffd1dc;
+        }
+        .coupon-desc {
+            color: #db7093;
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding: 5px;
+            border-bottom: 1px dashed #ffb6c1;
+        }
+        .coupon-code {
+            display: flex;
+            margin: 5px 0;
+            align-items: center;
+        }
+        .coupon-input {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border: 1px solid #ffb6c1;
+            border-radius: 4px;
+            background-color: #fff;
+            color: #c71585;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .copy-btn {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .copy-btn:hover {
+            background-color: #db7093;
+        }
+        /* 链接区域样式 - 统一QQ群和下载地址样式 */
+        .link-section {
+            margin-bottom: 25px;
+        }
+        .link-section h2 {
+            font-size: 18px;
+            color: #ff69b4;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ffb6c1;
+        }
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background-color: #fff0f5;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .link-item:hover {
+            background-color: #ffd1dc;
+            transform: translateX(5px);
+        }
+        .link-url {
+            color: #c71585;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .link-btn:hover {
+            background-color: #db7093;
+        }
+        .bookmark-tip {
+            background-color: #ffe4e1;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c71585;
+            font-size: 14px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .link-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .link-btn {
+                margin-top: 8px;
+                align-self: flex-end;
+            }
+            .coupon-code {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .copy-btn {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DMA万事屋公益导航</h1>
+            <p>为您提供快速便捷的访问入口</p>
+        </div>
+                      <div class="bookmark-tip">
+            请 Ctrl+D 收藏本页到浏览器收藏夹
+        </div>  
+        <!-- QQ群链接 -->
+        <div class="link-section">
+            <h2>QQ不禁言交流群</h2>
+            <div class="link-item">
+                <a href="https://www.baidu.com/" class="link-url" target="_blank">群号：1041552433</a>
+                <a href="https://www.baidu.com/" class="link-btn" target="_blank">点击进入</a>
+            </div>
+        </div>
+        
+        <!-- 公告栏 -->
+        <div class="announcement">
+            <h3>网站公告</h3>
+            <div class="announcement-content">
+                接软件调试，机器码解除，单人定制固件
+                <br>固件支持游戏：三角洲，村瓦，CF，PUBG，CS双服
+                <br>远程采集信息，1:1绝对单人
+                <br>过游戏屏蔽!带自主呼吸!TIp回响!tlp交互.中断，IO，写掩码，影子空间全有
+                <br>小白随便问，知无不答
+            </div>
+        </div>
+        
+        <!-- 卡密合集 -->
+        <div class="announcement">
+            <h3>公益卡密合集</h3>
+            <div class="announcement-content">
+                <!-- 卡密组1 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲 NEXO </div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="NK6A05AA02E0FE46628CB868032E1B40EF" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              
+                <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲 YSL</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="NKEEED397E3E474AB1A923F2DC5F52FF1B" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              
+                <!-- 卡密组2 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲 FAST 复制打开领取</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="https://key.fastcheat.top" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+                
+                <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲 PUA</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="PUAGY3A6C5345D3A84476A7F07AA19D328F8E" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲 NEX</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="NK6A05AA02E0FE46628CB868032E1B40EF" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">三角洲&村瓦&港瓦 DEP 复制链接打开购买</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="https://yun.520fk.cn/links/3259D272" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">村瓦&港瓦 CLS</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="CLSVALCF69C039BCDE4A9EB6F6AE63665F25DE" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+
+              <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">村瓦 GBK</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="GBKPGY084ITA680670VQVA71F7" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+              <!-- 卡密组3 -->
+                <div class="coupon-group">
+                    <div class="coupon-desc" contenteditable="true">永劫无间 XD</div>
+                    <div class="coupon-code">
+                        <input type="text" class="coupon-input" value="GBKPGY084ITA680670VQVA71F7" readonly>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">复制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 下载地址 - 改为与QQ群相同的样式 -->
+        <div class="link-section">
+            <h2>下载地址</h2>
+            <div class="link-item">
+                <a href="https://www.123912.com/s/w499-8YZud" class="link-url" target="_blank">三角洲行动</a>
+                <a href="https://www.123912.com/s/w499-8YZud" class="link-btn" target="_blank">点击下载</a>
+            </div>
+            
+            <div class="link-item">
+                <a href="https://www.123912.com/s/w499-0YZud" class="link-url" target="_blank">无畏契约</a>
+                <a href="https://www.123912.com/s/w499-0YZud" class="link-btn" target="_blank">点击下载</a>
+            </div>
+
+            <div class="link-item">
+                <a href="https://www.123912.com/s/w499-uYZud" class="link-url" target="_blank">瓦洛兰特</a>
+                <a href="https://www.123912.com/s/w499-uYZud" class="link-btn" target="_blank">点击下载</a>
+            </div>
+          
+            <div class="link-item">
+                <a href="https://www.123912.com/s/w499-SYZud" class="link-url" target="_blank">永劫无间</a>
+                <a href="https://www.123912.com/s/w499-SYZud" class="link-btn" target="_blank">点击下载</a>
+            </div>
+            </div>
+  
+
+
+        <div class="link-section">
+            <h2>最新网址2（备用）</h2>
+            <div class="link-item">
+                <a href="https://www.baidu.com" class="link-url" target="_blank">https://www.baidu.com</a>
+                <a href="https://www.baidu.com" class="link-btn" target="_blank">点击进入</a>
+            </div>
+        </div>
+        
+        <div class="link-section">
+            <h2>最新网址3（备用）</h2>
+            <div class="link-item">
+                <a href="https://www.baidu.com/" class="link-url" target="_blank">https://www.baidu.com/</a>
+                <a href="https://www.baidu.com/" class="link-btn" target="_blank">点击进入</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 DMA万事屋 All Rights Reserved</p>
+        </div>
+    </div>
+
+    <script>
+        // 复制卡密到剪贴板
+        function copyToClipboard(button) {
+            const input = button.previousElementSibling;
+            input.select();
+            document.execCommand('copy');
+            
+            // 显示复制成功的反馈
+            const originalText = button.textContent;
+            button.textContent = '已复制!';
+            setTimeout(() => {
+                button.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
